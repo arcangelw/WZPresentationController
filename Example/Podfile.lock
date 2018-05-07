@@ -1,0 +1,16 @@
+PODS:
+  - WZPresentationController (0.1.0)
+
+DEPENDENCIES:
+  - WZPresentationController (from `../`)
+
+EXTERNAL SOURCES:
+  WZPresentationController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WZPresentationController: 73374064e5d7b7b88c9d3ee8ba7f010247936d34
+
+PODFILE CHECKSUM: a5702aac985d73920ac77f2c2761eb8f50b4ac11
+
+COCOAPODS: 1.5.0
