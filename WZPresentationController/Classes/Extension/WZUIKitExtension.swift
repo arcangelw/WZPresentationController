@@ -11,10 +11,11 @@ public extension UIView {
     
     func wz_snapshotImage() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
+        defer {
+            UIGraphicsEndImageContext()
+        }
         drawHierarchy(in: bounds, afterScreenUpdates: false)
-        let snap = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return snap
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
 
@@ -52,7 +53,7 @@ extension UIImage {
             NSLog ("wz_image error: effectMaskImage must be backed by a CGImage:: \(maskImage.description)");
             return nil
         }
-        
+        self.ciImage
         let hasBlur:Bool = blurRadius > CGFloat.ulpOfOne
         let hasSaturation:Bool = fabs(saturation - 1.0) > CGFloat.ulpOfOne
         
@@ -178,7 +179,9 @@ extension UIImage {
         }
     
         UIGraphicsBeginImageContextWithOptions(size, isOpaque, scale)
-        
+        defer {
+            UIGraphicsEndImageContext()
+        }
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
         context.scaleBy(x: 1.0, y: -1.0)
         context.translateBy(x: 0.0, y: -size.height)
@@ -203,11 +206,7 @@ extension UIImage {
         if hasMask {
             context.restoreGState()
         }
-        
-        let outputImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return outputImage
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
     
 }
