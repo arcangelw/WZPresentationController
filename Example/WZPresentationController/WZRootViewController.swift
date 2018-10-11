@@ -12,7 +12,7 @@ class WZRootViewController: UIViewController {
     
     @IBAction func Alert(_ sender: UIButton) {
         let alert = WZAlertPresentedViewController()
-        alert.dismissPresentedOnTap = true
+        alert.maskAlpha = 0.8
         alert.passthroughViews = view.subviews
         switch sender.tag {
         case 0: alert.transitionType = .alertNormal
@@ -21,13 +21,12 @@ class WZRootViewController: UIViewController {
             break
         case 2: alert.transitionType = .alertDropDown
             break
-        case 3: alert.transitionType = .alertFadeBlurEffect(.light)
+        case 3: alert.transitionType = .alertFadeBlurEffect(style:.light)
             break
         default:
             break
         }
-        UIApplication.shared.currentViewController?.present(alert, animated: true) {
-        }
+        UIApplication.shared.wz_visibleViewController?.present(alert, animated: true)
     }
     
     @IBAction func sheet(_ sender: UIButton) {
@@ -36,19 +35,24 @@ class WZRootViewController: UIViewController {
         switch sender.tag {
         case 0: sheet.transitionType = .actionSheet
             break
-        case 1: sheet.transitionType = .actionSheetBlurEffect(.dark)
+        case 1: sheet.transitionType = .actionSheetBlurEffect(style:.dark)
             break
         default:
             break
         }
-        UIApplication.shared.currentViewController?.present(sheet, animated: true) {
-        }
+        UIApplication.shared.wz_visibleViewController?.present(sheet, animated: true)
+        
+//        let alert = UIAlertController(title: "dismiss", message: "dismiss dismiss dismiss", preferredStyle: .alert)
+//        let action = UIAlertAction(title: "dismiss", style: .default) { _ in
+//            self.dismiss(animated: true, completion: nil)
+//        }
+//        alert.addAction(action)
+//        present(alert, animated: true)
     }
     
     
     @IBAction func passthroughViewsAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
     }
-    
     
 }

@@ -32,7 +32,7 @@ WZPresentationController 是对 UIPresentationController 的简单封装
 	蒙板，默认提供了
 	passthroughViews:指定允许用户与之交互的UIView实例数组
 	dismissPresentedOnTap:点击遮罩dismiss presentedViewController
-	WZPresentationAnimatedTransitionType中指定WZPresentationBlurEffectStyle可以实现模糊背景
+	WZPresentationAnimatedTransitionType中指定UIBlurEffectStyle可以实现模糊背景
 	继承重写注册给WZPresentedViewController可以自定义相关功能需求
 ```
 

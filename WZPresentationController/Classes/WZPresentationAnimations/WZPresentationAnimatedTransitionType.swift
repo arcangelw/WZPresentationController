@@ -7,12 +7,6 @@
 
 import UIKit
 
-/// 模糊类型
-public enum WZPresentationBlurEffectStyle{
-    case extraLight
-    case light
-    case dark
-}
 
 /// 基本转场动画
 public enum WZPresentationAnimatedTransitionType{
@@ -21,11 +15,11 @@ public enum WZPresentationAnimatedTransitionType{
     case alertNormal
     case alertFade
     case alertDropDown
-    case alertBlurEffect(WZPresentationBlurEffectStyle)
-    case alertFadeBlurEffect(WZPresentationBlurEffectStyle)
-    case alertDropDownBlurEffect(WZPresentationBlurEffectStyle)
+    case alertBlurEffect(style:UIBlurEffect.Style)
+    case alertFadeBlurEffect(style:UIBlurEffect.Style)
+    case alertDropDownBlurEffect(style:UIBlurEffect.Style)
     case actionSheet
-    case actionSheetBlurEffect(WZPresentationBlurEffectStyle)
+    case actionSheetBlurEffect(style:UIBlurEffect.Style)
 }
 
 extension WZPresentationAnimatedTransitionType{
@@ -34,13 +28,10 @@ extension WZPresentationAnimatedTransitionType{
         return animatedTransitionClase.init(isPresent: isPresent)
     }
     
-    public var blurEffectType:WZPresentationBlurEffectStyle? {
+    public var blurEffect:UIBlurEffect? {
         switch self {
-        case .alertBlurEffect(let type), .alertFadeBlurEffect(let type),
-             .alertDropDownBlurEffect(let type), .actionSheetBlurEffect(let type):
-            return type
-        default:
-            return nil
+        case let .alertBlurEffect(value), let .alertFadeBlurEffect(value), let .alertDropDownBlurEffect(value), let .actionSheetBlurEffect(value): return UIBlurEffect(style: value)
+        default: return nil
         }
     }
     
@@ -55,7 +46,7 @@ extension WZPresentationAnimatedTransitionType{
     
     var animatedTransitionClase:WZPresentationBaseAnimatedTransition.Type{
         switch self {
-        case .custom(let Class):
+        case let .custom(Class):
             return Class
         case .alertNormal,.alertBlurEffect(_):
             return HXAlertAnimatedTransition.self

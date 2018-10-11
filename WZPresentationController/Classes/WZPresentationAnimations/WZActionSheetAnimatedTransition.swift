@@ -35,7 +35,7 @@ class HXActionSheetAnimatedTransition: WZPresentationBaseAnimatedTransition {
         }
         
         to.view.transform = start
-        UIView.animate(withDuration: duration, delay: 0.0, options:UIViewAnimationOptions(rawValue: 7 << 16 | UIViewAnimationOptions.allowAnimatedContent.rawValue), animations: {
+        UIView.animate(withDuration: duration, delay: 0.0, options:UIView.AnimationOptions(rawValue: 7 << 16 | UIView.AnimationOptions.allowAnimatedContent.rawValue), animations: {
             to.view.transform = end
         }) { finished in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
