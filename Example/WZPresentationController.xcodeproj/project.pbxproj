@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		339BDE7A209C4CCD00DEA599 /* WZAlertPresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339BDE79209C4CCD00DEA599 /* WZAlertPresentedViewController.swift */; };
-		339BDE7E209C4D6000DEA599 /* WZActionSheetPresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339BDE7D209C4D6000DEA599 /* WZActionSheetPresentedViewController.swift */; };
-		339BDE80209C5B9200DEA599 /* WZRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339BDE7F209C5B9200DEA599 /* WZRootViewController.swift */; };
+		33196DB921703BA600808B04 /* WZSwiftHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33196DB721703BA600808B04 /* WZSwiftHomeController.swift */; };
+		33196DBA21703BA600808B04 /* WZSwiftHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33196DB721703BA600808B04 /* WZSwiftHomeController.swift */; };
+		33196DC321707B4B00808B04 /* WZObjCBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33196DC221707B4B00808B04 /* WZObjCBaseAlertView.m */; };
+		33196DC421707B4B00808B04 /* WZObjCBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33196DC221707B4B00808B04 /* WZObjCBaseAlertView.m */; };
+		33196DC821707CA600808B04 /* WZObjCHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33196DC621707CA600808B04 /* WZObjCHomeController.m */; };
+		33196DC921707CA600808B04 /* WZObjCHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33196DC621707CA600808B04 /* WZObjCHomeController.m */; };
+		33196DCE2170868900808B04 /* WZObjCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33196DCD2170868900808B04 /* WZObjCAlertView.m */; };
+		33196DCF2170868900808B04 /* WZObjCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33196DCD2170868900808B04 /* WZObjCAlertView.m */; };
 		4746D0164416982EE658B18B /* Pods_WZPresentationController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113EB5DDB486F7848D2903F /* Pods_WZPresentationController_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -32,15 +36,20 @@
 /* Begin PBXFileReference section */
 		1312085FB07BDE70E10A01F3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3113EB5DDB486F7848D2903F /* Pods_WZPresentationController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZPresentationController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		339BDE79209C4CCD00DEA599 /* WZAlertPresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZAlertPresentedViewController.swift; sourceTree = "<group>"; };
-		339BDE7D209C4D6000DEA599 /* WZActionSheetPresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZActionSheetPresentedViewController.swift; sourceTree = "<group>"; };
-		339BDE7F209C5B9200DEA599 /* WZRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZRootViewController.swift; sourceTree = "<group>"; };
+		33196DAE21703B6F00808B04 /* WZPresentationController_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZPresentationController_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		33196DAF21703B6F00808B04 /* WZPresentationController_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZPresentationController_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		33196DB721703BA600808B04 /* WZSwiftHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZSwiftHomeController.swift; sourceTree = "<group>"; };
+		33196DC121707B4B00808B04 /* WZObjCBaseAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZObjCBaseAlertView.h; sourceTree = "<group>"; };
+		33196DC221707B4B00808B04 /* WZObjCBaseAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZObjCBaseAlertView.m; sourceTree = "<group>"; };
+		33196DC521707CA600808B04 /* WZObjCHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZObjCHomeController.h; sourceTree = "<group>"; };
+		33196DC621707CA600808B04 /* WZObjCHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZObjCHomeController.m; sourceTree = "<group>"; };
+		33196DCC2170868900808B04 /* WZObjCAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZObjCAlertView.h; sourceTree = "<group>"; };
+		33196DCD2170868900808B04 /* WZObjCAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZObjCAlertView.m; sourceTree = "<group>"; };
 		4009D809C6AF9B73E7D8DF6D /* Pods-WZPresentationController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZPresentationController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZPresentationController_Example/Pods-WZPresentationController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		49AD9819A01CC40268A924ED /* Pods-WZPresentationController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZPresentationController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZPresentationController_Example/Pods-WZPresentationController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WZPresentationController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZPresentationController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WZPresentationController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZPresentationController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +82,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33196DA621703B2800808B04 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				33196DB721703BA600808B04 /* WZSwiftHomeController.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		33196DA721703B2800808B04 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				33196DC121707B4B00808B04 /* WZObjCBaseAlertView.h */,
+				33196DC221707B4B00808B04 /* WZObjCBaseAlertView.m */,
+				33196DCC2170868900808B04 /* WZObjCAlertView.h */,
+				33196DCD2170868900808B04 /* WZObjCAlertView.m */,
+				33196DAE21703B6F00808B04 /* WZPresentationController_Example-Bridging-Header.h */,
+				33196DAF21703B6F00808B04 /* WZPresentationController_Tests-Bridging-Header.h */,
+				33196DC521707CA600808B04 /* WZObjCHomeController.h */,
+				33196DC621707CA600808B04 /* WZObjCHomeController.m */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				339BDE7F209C5B9200DEA599 /* WZRootViewController.swift */,
-				339BDE79209C4CCD00DEA599 /* WZAlertPresentedViewController.swift */,
-				339BDE7D209C4D6000DEA599 /* WZActionSheetPresentedViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				33196DA721703B2800808B04 /* ObjC */,
+				33196DA621703B2800808B04 /* Swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -250,7 +280,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -317,10 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				339BDE7E209C4D6000DEA599 /* WZActionSheetPresentedViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				339BDE7A209C4CCD00DEA599 /* WZAlertPresentedViewController.swift in Sources */,
-				339BDE80209C5B9200DEA599 /* WZRootViewController.swift in Sources */,
+				33196DC821707CA600808B04 /* WZObjCHomeController.m in Sources */,
+				33196DC321707B4B00808B04 /* WZObjCBaseAlertView.m in Sources */,
+				33196DCE2170868900808B04 /* WZObjCAlertView.m in Sources */,
+				33196DB921703BA600808B04 /* WZSwiftHomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +359,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				33196DC921707CA600808B04 /* WZObjCHomeController.m in Sources */,
+				33196DC421707B4B00808B04 /* WZObjCBaseAlertView.m in Sources */,
+				33196DCF2170868900808B04 /* WZObjCAlertView.m in Sources */,
+				33196DBA21703BA600808B04 /* WZSwiftHomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,14 +377,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -470,12 +496,24 @@
 			baseConfigurationReference = 4009D809C6AF9B73E7D8DF6D /* Pods-WZPresentationController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WZPresentationController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WZPresentationController\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WZPresentationController/ObjC/WZPresentationController_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -485,12 +523,23 @@
 			baseConfigurationReference = 49AD9819A01CC40268A924ED /* Pods-WZPresentationController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WZPresentationController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WZPresentationController\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WZPresentationController/ObjC/WZPresentationController_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -499,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69A4812EAC6F8BDFB45C4F0E /* Pods-WZPresentationController_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -511,6 +561,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WZPresentationController/ObjC/WZPresentationController_Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -519,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCC80FF243E218ADFB2BE487 /* Pods-WZPresentationController_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -527,6 +580,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WZPresentationController/ObjC/WZPresentationController_Tests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

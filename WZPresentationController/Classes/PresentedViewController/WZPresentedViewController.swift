@@ -71,7 +71,7 @@ open class WZPresentedViewController: UIViewController {
 // MARK: - WZPresentationTransitioning
 extension WZPresentedViewController:WZPresentationTransitioning {
     
-    func frameOfPresentedView(inContainerView containerView: UIView) -> CGRect {
+    public func frameOfPresentedView(inContainerView containerView: UIView) -> CGRect {
         let rect = containerView.bounds
         let size = preferredContentSize
         let x =  (rect.width - size.width) / 2.0
@@ -83,7 +83,7 @@ extension WZPresentedViewController:WZPresentationTransitioning {
         return CGRect(origin: CGPoint(x: x, y: y), size: size)
     }
     
-    func animatedTransitioning(isPresenting: Bool) -> UIViewControllerAnimatedTransitioning? {
+    public func animatedTransitioning(isPresenting: Bool) -> UIViewControllerAnimatedTransitioning? {
         return transitionType.presentationAnimatedTransition(isPresent: isPresenting)
     }
 }

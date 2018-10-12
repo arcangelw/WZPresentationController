@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WZPresentationController: 304dbf7287743b622ec883370b3b3da5a7e5bd33
+  WZPresentationController: 16ed5e049b8005ea910c9e9ebe302aaae8d7f5dc
 
 PODFILE CHECKSUM: a5702aac985d73920ac77f2c2761eb8f50b4ac11
 

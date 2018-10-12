@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.source_files = 'WZPresentationController/Classes/**/*'
   s.frameworks = 'UIKit', 'Foundation'
   s.static_framework = true
+  s.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 end

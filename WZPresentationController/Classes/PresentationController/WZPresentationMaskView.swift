@@ -37,7 +37,7 @@ open class WZPresentationMaskView: UIVisualEffectView {
         presentedViewController = presented
         /// 有设置模糊的话 不设置透明色
         if self.effect == nil {
-            backgroundColor = UIColor.black.withAlphaComponent(maskAlpha)
+            backgroundColor = UIColor.white.withAlphaComponent(maskAlpha)
         }
     }
     

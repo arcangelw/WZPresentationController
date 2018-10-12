@@ -7,7 +7,7 @@
 
 import UIKit
 
-@objc protocol WZPresentationTransitioning:class {
+@objc public protocol WZPresentationTransitioning:class{
     /// presentedViewController.view 位置计算
     @objc(frameOfPresentedViewInContainerView:)
     func frameOfPresentedView(inContainerView containerView:UIView) -> CGRect
