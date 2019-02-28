@@ -8,8 +8,8 @@
 import UIKit
 
 open class WZPresentationBaseAnimatedTransition: NSObject {
-    /// true present  false dismiss
-    public let isPresent:Bool
+    /// true present false dismiss
+    public let isPresent: Bool
     
     required public init(isPresent:Bool){
         self.isPresent = isPresent
@@ -34,7 +34,7 @@ open class WZPresentationBaseAnimatedTransition: NSObject {
 }
 
 // MARK: - UIViewControllerAnimatedTransitioning
-extension WZPresentationBaseAnimatedTransition:UIViewControllerAnimatedTransitioning {
+extension WZPresentationBaseAnimatedTransition: UIViewControllerAnimatedTransitioning {
     
     public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.25

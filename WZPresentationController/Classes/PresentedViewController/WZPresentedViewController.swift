@@ -12,14 +12,14 @@ import UIKit
 open class WZPresentedViewController: UIViewController {
     
     /// 指定允许用户与之交互的UIView实例数组 默认为空
-    @objc public var passthroughViews:[UIView] = [UIView]() {
+    @objc public var passthroughViews:[UIView] = [] {
         willSet{
             presentation.maskView.passthroughViews = newValue
         }
     }
     
     /// 点击遮罩dismiss presentedViewController 默认不可以
-    @objc public var dismissPresentedOnTap:Bool = false {
+    @objc public var dismissPresentedOnTap = false {
         willSet{
             presentation.maskView.dismissPresentedOnTap = newValue
             
@@ -27,7 +27,7 @@ open class WZPresentedViewController: UIViewController {
     }
     
     /// 遮罩透明度 默认0.4
-    @objc public var maskAlpha:CGFloat = 0.4 {
+    @objc public var maskAlpha: CGFloat = 0.4 {
         willSet{
             presentation.maskView.maskAlpha = newValue
         }
@@ -44,17 +44,13 @@ open class WZPresentedViewController: UIViewController {
     }
     
     /// 继承WZPresentationMaskView 可以自定义遮罩
-    public let maskViewClass:WZPresentationMaskView.Type
+    public let maskViewClass: WZPresentationMaskView.Type
     
     /// 继承WZPresentationController 可以自定义presentation容器
-    public let presentationControllerClass:WZPresentationController.Type
+    public let presentationControllerClass: WZPresentationController.Type
     
-    public fileprivate(set) var presentation:WZPresentationController!
-    
-    deinit {
-        passthroughViews = []
-    }
-    
+    public fileprivate(set) var presentation: WZPresentationController!
+
     required public init(maskViewClass:WZPresentationMaskView.Type = WZPresentationMaskView.self , presentationControllerClass:WZPresentationController.Type = WZPresentationController.self){
         self.maskViewClass = maskViewClass
         self.presentationControllerClass = presentationControllerClass
@@ -69,7 +65,7 @@ open class WZPresentedViewController: UIViewController {
 }
 
 // MARK: - WZPresentationTransitioning
-extension WZPresentedViewController:WZPresentationTransitioning {
+extension WZPresentedViewController: WZPresentationTransitioning {
     
     public func frameOfPresentedView(inContainerView containerView: UIView) -> CGRect {
         let rect = containerView.bounds
