@@ -27,25 +27,11 @@ extension UIViewController {
 extension UIApplication {
     
     @objc public var wz_visibleViewController:UIViewController? {
-        
         return wz_rootViewController?._visibleViewController
     }
     
    @objc public var wz_rootViewController:UIViewController? {
-        
         return  delegate?.window??.rootViewController
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-

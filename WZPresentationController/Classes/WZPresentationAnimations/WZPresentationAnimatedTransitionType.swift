@@ -9,52 +9,53 @@ import UIKit
 
 
 /// 基本转场动画
-public enum WZPresentationAnimatedTransitionType{
+public enum WZPresentationAnimatedTransitionType {
     /// 自定义转场 用来继承扩展自定义动画类型的
     case custom(WZPresentationBaseAnimatedTransition.Type)
     case alertNormal
     case alertFade
     case alertDropDown
-    case alertBlurEffect(style:UIBlurEffect.Style)
-    case alertFadeBlurEffect(style:UIBlurEffect.Style)
-    case alertDropDownBlurEffect(style:UIBlurEffect.Style)
+    case alertBlurEffect(style :UIBlurEffect.Style)
+    case alertFadeBlurEffect(style: UIBlurEffect.Style)
+    case alertDropDownBlurEffect(style: UIBlurEffect.Style)
     case actionSheet
-    case actionSheetBlurEffect(style:UIBlurEffect.Style)
+    case actionSheetBlurEffect(style: UIBlurEffect.Style)
 }
 
-extension WZPresentationAnimatedTransitionType{
+extension WZPresentationAnimatedTransitionType {
     
     public func presentationAnimatedTransition(isPresent:Bool = true) ->WZPresentationBaseAnimatedTransition {
         return animatedTransitionClase.init(isPresent: isPresent)
     }
     
-    public var blurEffect:UIBlurEffect? {
+    public var blurEffect: UIBlurEffect? {
         switch self {
-        case let .alertBlurEffect(value), let .alertFadeBlurEffect(value), let .alertDropDownBlurEffect(value), let .actionSheetBlurEffect(value): return UIBlurEffect(style: value)
+        case let .alertBlurEffect(value), let .alertFadeBlurEffect(value), let .alertDropDownBlurEffect(value), let .actionSheetBlurEffect(value):
+            return UIBlurEffect(style: value)
         default: return nil
         }
     }
     
-    public var isActionSheet:Bool {
+    public var isActionSheet: Bool {
         switch self {
-        case .actionSheet, .actionSheetBlurEffect(_):
+        case .actionSheet, .actionSheetBlurEffect:
             return true
         default:
             return false
         }
     }
     
-    var animatedTransitionClase:WZPresentationBaseAnimatedTransition.Type{
+    var animatedTransitionClase: WZPresentationBaseAnimatedTransition.Type{
         switch self {
         case let .custom(Class):
             return Class
-        case .alertNormal,.alertBlurEffect(_):
+        case .alertNormal,.alertBlurEffect:
             return HXAlertAnimatedTransition.self
-        case .alertFade, .alertFadeBlurEffect(_):
+        case .alertFade, .alertFadeBlurEffect:
             return HXAlertFadeAnimatedTransition.self
-        case .alertDropDown, .alertDropDownBlurEffect(_):
+        case .alertDropDown, .alertDropDownBlurEffect:
             return HXAlertDropDownAnimatedTransition.self
-        case .actionSheet, .actionSheetBlurEffect(_):
+        case .actionSheet, .actionSheetBlurEffect:
             return HXActionSheetAnimatedTransition.self
         }
     }

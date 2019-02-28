@@ -28,7 +28,7 @@ class HXActionSheetAnimatedTransition: WZPresentationBaseAnimatedTransition {
         if isPresent == false {
             swap(&from, &to)
             swap(&start, &end)
-        }else{
+        } else {
             /// 只有在 present 时候 需要将 to.view 添加到 containerView
             to.view.frame = to.presentationController!.frameOfPresentedViewInContainerView
             containerView.addSubview(to.view)

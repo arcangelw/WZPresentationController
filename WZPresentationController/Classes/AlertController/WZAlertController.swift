@@ -11,9 +11,9 @@ import UIKit
 
 final public class WZAlertController: UIViewController {
     
-    @objc public let contentView:WZPresentedViewTransitioning
+    @objc public let contentView: WZPresentedViewTransitioning
     
-    @objc public fileprivate(set) var presentation:WZPresentationController!
+    @objc public fileprivate(set) var presentation: WZPresentationController!
     
     @objc required public init(contentView: WZPresentedViewTransitioning, nibName: String? = nil, bundle: Bundle? = nil) {
         self.contentView = contentView
